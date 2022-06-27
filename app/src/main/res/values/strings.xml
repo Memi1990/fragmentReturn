@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fragment_Return</string>
+    <string name="one">FIRST</string>
+    <string name="two">SECOND</string>
+    <string name="three">THIRD</string>
+    <string name="four">FOURTH</string>
+    <string name="five">FIFTH</string>
+    <string name="btn1">Next Activity</string>
+    <string name="btn2">BLUE</string>
+    <string name="btn3">BEIGE</string>
+    <string name="btn4">BROWN</string>
+    <string name="btn5">BACK</string>
+</resources>
