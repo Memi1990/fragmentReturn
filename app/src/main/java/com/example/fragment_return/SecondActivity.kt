@@ -3,6 +3,7 @@ package com.example.fragment_return
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.fragment_return.Fragments.DialogFragment
 import com.example.fragment_return.Fragments.FifthFragment
 import com.example.fragment_return.Fragments.FourthFragment
 import com.example.fragment_return.Fragments.ThirdFragment
@@ -26,6 +27,9 @@ class SecondActivity : AppCompatActivity() {
 
         b.btnBack.setOnClickListener {
             onBackPressed()
+        }
+        b.btnBorrar.onClickDialog(view:View){
+            DialogFragment().show(supportFragmentManager,DialogFragment.TAG)
         }
     }
 //    fun fragmentTrans(fragment:Fragment){
