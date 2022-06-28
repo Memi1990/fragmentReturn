@@ -8,14 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import com.example.fragment_return.R
 
-class DialogFragment : Fragment() {
-
-    val dialog = DialogFragment()
-    dialog.setArguments(bundle)
-    dialog.show(supportFragmentManager, "tag")
-
+class myDialogFragment : DialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,7 +28,7 @@ class DialogFragment : Fragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return AlertDialog.Builder(context!!)
+        return AlertDialog.Builder(context)
             .setMessage(R.string.confirm)
             .setPositiveButton(R.string.acept) {dialog, id ->
                 Toast.makeText(context, "Has eliminado los elementos seleccionados", Toast.LENGTH_SHORT).show()

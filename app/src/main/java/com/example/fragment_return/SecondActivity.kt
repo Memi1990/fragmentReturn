@@ -2,11 +2,9 @@ package com.example.fragment_return
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.fragment_return.Fragments.DialogFragment
-import com.example.fragment_return.Fragments.FifthFragment
-import com.example.fragment_return.Fragments.FourthFragment
-import com.example.fragment_return.Fragments.ThirdFragment
+import com.example.fragment_return.Fragments.*
 import com.example.fragment_return.databinding.ActivitySecondBinding
 
 
@@ -28,10 +26,9 @@ class SecondActivity : AppCompatActivity() {
         b.btnBack.setOnClickListener {
             onBackPressed()
         }
-        b.btnBorrar.onClickDialog(view:View){
-            DialogFragment().show(supportFragmentManager,DialogFragment.TAG)
-        }
+
     }
+
 //    fun fragmentTrans(fragment:Fragment){
 //        supportFragmentManager.beginTransaction().apply {
 //            replace(R.id.fragmentContainerView3,fragment)
@@ -51,5 +48,8 @@ class SecondActivity : AppCompatActivity() {
                 R.anim.fade_out)
             .replace(R.id.fragmentContainerView3,fragment)
             .commit()
+    }
+    fun onClickDialog (view:View){
+        myDialogFragment().show(supportFragmentManager, myDialogFragment.TAG)
     }
 }

@@ -78,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:backgroundTint="@color/ligt_blue"
+        android:onClick="onClickDialog"
         android:text="@string/borrado"
         android:textColor="@color/dark_turquese"
         android:textStyle="bold"
